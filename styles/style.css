@@ -51,3 +51,11 @@ body {
   color: #f7f7f7;
   background-color: #a4a4a4;
 }
+
+.header > .header__image {
+  background-image: url(../images/batman.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
