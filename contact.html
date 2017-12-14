@@ -4,6 +4,10 @@
 <head>
     <title>Contacto</title>
 
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpiiZm0kg4wbYwPvUtNZvyLbiNcz6p8"></script>
     <script>
         function initialize() {
@@ -50,27 +54,27 @@
         </ul>
     </nav>
 
-    <main>
-        <section>
+    <main class="container">
+        <section class="section-container">
             <h2>Contacta con nosotros</h2>
 
-            <div>
-                <div>
+            <div class="row">
+                <div class="col-6">
                     <div id="googleMap"></div>
                 </div>
-                <div>
-                    <div>
+                <div class="col-6">
+                    <div class="form">
                         <form name="contacto" method="get">
-                            <div>
+                            <div class="form-row">
                                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 
                                 <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
                             </div>
-                            <div>
+                            <div class="form-row">
                                 <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+"
                                     required>
                             </div>
-                            <div>
+                            <div class="form-row">
                                 <label for="tipo_mision_1">Recate</label>
                                 <input type="radio" id="tipo_mision_1" name="tipo_mision" value="Recate" required>
 
@@ -80,15 +84,15 @@
                                 <label for="tipo_mision_3">Disparos y explosivos</label>
                                 <input type="radio" id="tipo_mision_3" name="tipo_mision" value="Disparos y explosivos" required>
                             </div>
-                            <div>
+                            <div class="form-row">
                                 <label for="ejercito">Tamaño del ejercito</label>
                                 <input type="number" id="ejercito" name="ejercito" min="10" required>
                             </div>
-                            <div>
+                            <div class="form-row">
                                 <label for="fecha">Fecha de la misión</label>
                                 <input type="date" id="fecha" name="fecha" required>
                             </div>
-                            <div>
+                            <div class="form-row">
                                 <button type="submit" id="enviar">Enviar</button>
                             </div>
                         </form>
@@ -96,35 +100,41 @@
                 </div>
             </div>
         </section>
-        <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tipo de servicio</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Consulta</td>
-                        <td>100 €</td>
-                    </tr>
-                    <tr>
-                        <td>Misión simple</td>
-                        <td>500 €</td>
-                    </tr>
-                    <tr>
-                        <td>Rescate</td>
-                        <td>1.000 €</td>
-                    </tr>
-                    <tr>
-                        <td>Salvar Gotham</td>
-                        <td>15.000 €</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="section-container">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de servicio</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Consulta</td>
+                            <td>100 €</td>
+                        </tr>
+                        <tr>
+                            <td>Misión simple</td>
+                            <td>500 €</td>
+                        </tr>
+                        <tr>
+                            <td>Rescate</td>
+                            <td>1.000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Salvar Gotham</td>
+                            <td>15.000 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
+
+    <footer class="footer row-flex">
+        Sergio Fernández &copy; 2017 KeepCoding
+    </footer>
 </body>
 
 </html>
