@@ -105,3 +105,12 @@ body {
   max-width: 100%;
   border-radius: 50%;
 }
+
+.flip {
+  height: 305px;
+  position: relative;
+}
+
+.flip > .flip__img {
+  position: absolute;
+}
