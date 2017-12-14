@@ -114,3 +114,17 @@ body {
 .flip > .flip__img {
   position: absolute;
 }
+
+.transport-item .transport-item__image {
+  max-width: 100%;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.92);
+  color: var(--main-text-color);
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
