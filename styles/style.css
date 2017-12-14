@@ -52,6 +52,27 @@ body {
   background-color: #a4a4a4;
 }
 
+.header > .header__title {
+  position: absolute;
+  left: 0;
+  top: 65%;
+  width: 100%;
+  color: white;
+  font-family: batman;
+  text-align: center;
+  font-size: 100px;
+}
+
+.header > .header__cite {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  color: white;
+  font-size: 28px;
+  font-family: batman;
+  text-align: center;
+}
+
 .header > .header__image {
   background-image: url(../images/batman.jpg);
   background-size: 100% 100%;
