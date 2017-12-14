@@ -4,6 +4,7 @@
 <head>
     <title>Batman</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/grid.css">
 </head>
 
 <body>
@@ -38,23 +39,27 @@
     </header>
 
     <main class="container">
-        <section id="quien-soy" class="about-me">
-            <div class="about-me__video">
-                <video id="video" width="550" height="300" controls>
-                    <source src="./video/batman.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="about-me__info">
-                <h2>Quien soy</h2>
-                Batman:
-                <span class="about-me__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea sint eligendi in, velit distinctio, natus, eius
-                    quae praesentium optio ex consectetur iste fugit harum odit? Soluta laborum aspernatur asperiores maxime.</span>
+        <section id="quien-soy" class="section-container">
+            <div class="about-me clearfix">
+                <div class="about-me__video">
+                    <video id="video" width="550" height="300" controls>
+                        <source src="./video/batman.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="about-me__info">
+                    <h2>Quien soy</h2>
+                    Batman:
+                    <span class="about-me__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea sint eligendi in, velit distinctio, natus,
+                        eius quae praesentium optio ex consectetur iste fugit harum odit? Soluta laborum aspernatur asperiores
+                        maxime.
+                    </span>
+                </div>
             </div>
         </section>
 
         <section id="equipo" class="team">
-            <div>
-                <div>
+            <div class="row">
+                <div class="col-4">
                     <article class="team-member">
                         <header>
                             <h3>
@@ -63,7 +68,7 @@
                             </h3>
                             <h4 class="team-member__position">Mayordomo</h4>
                         </header>
-                        <figure class="team-membe__photo photo">
+                        <figure class="team-member__photo photo">
                             <img src="./images/alfred.jpg" alt="Alfred Pennyworth">
                             <figcaption class="photho__name">
                                 Alfred Pennyworth
@@ -74,7 +79,7 @@
                         </p>
                     </article>
                 </div>
-                <div>
+                <div class="col-4">
                     <article class="team-member">
                         <header>
                             <h3>
@@ -102,7 +107,7 @@
                         </p>
                     </article>
                 </div>
-                <div>
+                <div class="col-4">
                     <article class="team-member">
                         <header>
                             <h3>

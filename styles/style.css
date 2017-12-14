@@ -3,9 +3,17 @@
   font-family: batman;
 }
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
+  --main-text-color: #f7f7f7;
+  --secondary-text-color: #a4a4a4;
 }
 
 .clearfix:after {
@@ -20,7 +28,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: var(--main-text-color);
+  z-index: 1;
 }
 
 .navbar > .navbar__list {
@@ -43,13 +52,13 @@ body {
 }
 
 .navbar > .navbar__list > .navbar__item--active a {
-  color: #f7f7f7;
-  background-color: #a4a4a4;
+  color: var(--main-text-color);
+  background-color: var(--secondary-text-color);
 }
 
 .navbar > .navbar__list > .navbar__item a:hover {
-  color: #f7f7f7;
-  background-color: #a4a4a4;
+  color: var(--main-text-color);
+  background-color: var(--secondary-text-color);
 }
 
 .header > .header__title {
@@ -60,7 +69,7 @@ body {
   color: white;
   font-family: batman;
   text-align: center;
-  font-size: 100px;
+  font-size: 6rem;
 }
 
 .header > .header__cite {
@@ -68,15 +77,31 @@ body {
   top: 60%;
   width: 100%;
   color: white;
-  font-size: 28px;
+  font-size: 1.6rem;
   font-family: batman;
   text-align: center;
 }
 
 .header > .header__image {
   background-image: url(../images/batman.jpg);
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
+}
+
+.about-me > .about-me__video {
+  float: left;
+  max-width: 50%;
+}
+
+.about-me > .about-me__info {
+  float: right;
+  max-width: 50%;
+}
+
+.team-member > .team-member__photo img {
+  height: 300px;
+  max-width: 100%;
+  border-radius: 50%;
 }
