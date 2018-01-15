@@ -50,6 +50,7 @@ body {
   text-decoration: none;
   padding: 20px;
   color: rgba(0, 0, 0, 0.9);
+  transition: all 0.5s linear;
 }
 
 .navbar > .navbar__list > .navbar__item--active a {
@@ -71,6 +72,9 @@ body {
   font-family: batman;
   text-align: center;
   font-size: 6rem;
+  visibility: hidden;
+  animation: titleAnimation 2s forwards;
+  animation-delay: 0.8s;
 }
 
 .header > .header__cite {
@@ -81,14 +85,22 @@ body {
   font-size: 1.6rem;
   font-family: batman;
   text-align: center;
+  opacity: 0;
+  animation: subtitleAnimation 3s forwards;
+  animation-delay: 1s;
 }
 
 .header > .header__image {
   background-image: url(../images/batman.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
+  transition: background-size 0.5s;
+}
+
+.header > .header__image:hover {
+  background-size: 115% 115%;
 }
 
 .about-me > .about-me__video {
@@ -114,8 +126,21 @@ body {
 
 .flip > .flip__img {
   position: absolute;
+  backface-visibility: hidden;
+  transition: transform 1s;
 }
 
+.flip__img--back {
+  transform: rotateY(-180deg);
+}
+
+.flip:hover .flip__img--front {
+  transform: rotateY(-180deg);
+}
+
+.flip:hover .flip__img--back {
+  transform: rotateY(0);
+}
 .transport-item .transport-item__image {
   max-width: 100%;
   height: 250px;
@@ -128,4 +153,29 @@ body {
   height: 50px;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes titleAnimation {
+  0% {
+    font-size: 200px;
+  }
+  50% {
+    font-size: 180px;
+  }
+  100% {
+    font-size: 100px;
+    visibility: visible;
+  }
+}
+
+@keyframes subtitleAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
