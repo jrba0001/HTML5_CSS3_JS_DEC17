@@ -47,3 +47,61 @@ function scrollToElement(element) {
     element.lastJump = null;
   }
 }
+
+var acumulativeOffset = function(element) {
+  var top = 0;
+
+  do {
+    top += element.offsetTop || 0;
+    element = element.offsetParent;
+  } while (element);
+
+  return top - 50;
+};
+
+var quienSoyOffset = acumulativeOffset(document.getElementById("quien-soy"));
+var equipoOffset = acumulativeOffset(document.getElementById("equipo"));
+var transporteOffset = acumulativeOffset(document.getElementById("transporte"));
+
+window.addEventListener("scroll", changeMenuStyle);
+
+var previous;
+
+function changeMenuStyle(event) {
+  var pageOffset = window.pageYOffset;
+
+  if (pageOffset >= 0 && pageOffset < quienSoyOffset) {
+    if (!previous || previous !== 1) {
+      previous = 1;
+    } else {
+      return false;
+    }
+
+    deleteActiveClass();
+    document
+      .querySelector("a[href='#']")
+      .parentNode.classList.add("navbar__item--active");
+  } else if (pageOffset >= quienSoyOffset && pageOffset < equipoOffset) {
+    if (!previous || previous !== 2) {
+      previous = 2;
+    } else {
+      return false;
+    }
+
+    deleteActiveClass();
+    document
+      .querySelector("a[href$='quien-soy']")
+      .parentNode.classList.add("navbar__item--active");
+  } else if (pageOffset >= equipoOffset && pageOffset < transporteOffset) {
+    if (!previous || previous !== 3) {
+      previous = 3;
+    } else {
+      return false;
+    }
+
+    deleteActiveClass();
+    document
+      .querySelector("a[href$='equipo']")
+      .parentNode.classList.add("navbar__item--active");
+  }
+}
