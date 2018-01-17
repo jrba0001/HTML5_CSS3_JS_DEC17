@@ -78,9 +78,7 @@ function changeMenuStyle(event) {
     }
 
     deleteActiveClass();
-    document
-      .querySelector("a[href='#']")
-      .parentNode.classList.add("navbar__item--active");
+    setActiveItem("a[href='#']");
   } else if (pageOffset >= quienSoyOffset && pageOffset < equipoOffset) {
     if (!previous || previous !== 2) {
       previous = 2;
@@ -89,10 +87,8 @@ function changeMenuStyle(event) {
     }
 
     deleteActiveClass();
-    document
-      .querySelector("a[href$='quien-soy']")
-      .parentNode.classList.add("navbar__item--active");
-  } else if (pageOffset >= equipoOffset && pageOffset < transporteOffset) {
+    setActiveItem("a[href$='quien-soy']");
+  } else if (pageYOffset >= equipoOffset && pageYOffset < transporteOffset) {
     if (!previous || previous !== 3) {
       previous = 3;
     } else {
@@ -100,8 +96,12 @@ function changeMenuStyle(event) {
     }
 
     deleteActiveClass();
-    document
-      .querySelector("a[href$='equipo']")
-      .parentNode.classList.add("navbar__item--active");
+    setActiveItem("a[href$='equipo']");
   }
+}
+
+function setActiveItem(selector) {
+  document
+    .querySelector(selector)
+    .parentNode.classList.add("navbar__item--active");
 }
