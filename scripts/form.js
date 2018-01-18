@@ -56,7 +56,7 @@ form.addEventListener("submit", function(event) {
 
   setTimeout(function() {
     form.reset();
-    alert("Tus datos han sido enviados corretamente");
+    sendNotification("Formulario recibido", "Gracias por participar");
     submitButton.removeAttribute("disabled");
   }, 1000);
 });
