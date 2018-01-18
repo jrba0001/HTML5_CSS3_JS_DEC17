@@ -64,15 +64,14 @@
                 </div>
                 <div class="col-6">
                     <div class="form">
-                        <form name="contacto" method="get">
+                        <form name="contacto" method="get" novalidate>
                             <div class="form-row">
                                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 
                                 <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
                             </div>
                             <div class="form-row">
-                                <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+"
-                                    required>
+                                <input type="text" id="email" name="email" placeholder="name@company.com">
                             </div>
                             <div class="form-row">
                                 <label for="tipo_mision_1">Recate</label>
@@ -135,6 +134,8 @@
     <footer class="footer row-flex">
         Sergio Fernández &copy; 2017 KeepCoding
     </footer>
+
+    <script src="./scripts/form.js"></script>
 </body>
 
 </html>
